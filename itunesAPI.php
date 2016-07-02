@@ -19,18 +19,6 @@ $lang = 'ja_jp';
 $url = $base_url.'?term='.$term.'&media='.$media.'&entity='.$entity.'&country='.$country
 			.'&lang='.$lang.'&limit='.$limit;
 
-// REST リクエストの発行
-// require_once('HTTP/Request.php');
-// $request = new HTTP_Request($url);
-// $result = $request->sendRequest();
-
-// // レスポンスを取得
-// $json = $request->getResponseBody();
-
-// // 連想配列に格納
-// $data = json_decode($json, true);
-
-
 // PHP5
 $json = file_get_contents($url);
 $data = json_decode($json, true);
