@@ -11,7 +11,7 @@ $entity = 'software';
 $attribute = '';
 
 $callback = 'callbackjs';
-$limit = 10;
+$limit = 20;
 
 $offset = 0;
 $lang = 'ja_jp';
