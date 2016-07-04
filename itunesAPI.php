@@ -11,7 +11,7 @@ $entity = 'software';
 $attribute = '';
 
 $callback = 'callbackjs';
-$limit = 10;
+// $limit = 10;
 
 $offset = 0;
 $lang = 'ja_jp';
@@ -22,6 +22,7 @@ $url = $base_url.'?term='.$term.'&media='.$media.'&entity='.$entity.'&country='.
 // PHP5
 $json = file_get_contents($url);
 $data = json_decode($json, true);
+
 
 foreach ($data['results'] as $row) {
 	$title = $row['trackCensoredName'];
