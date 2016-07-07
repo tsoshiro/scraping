@@ -42,5 +42,9 @@ foreach ($data['results'] as $row) {
 // 文字列をファイルに書き込み、CSVデータを作成する
 $file_name = "description_data.csv";
 
-// 作成
-file_put_contents($file_name, $file_data);
+// ファイルを取得
+if (file_get_contents($file_name) != "") {
+	$file_data = file_get_contents($file_name).$file_data;
+	// 作成
+	file_put_contents($file_name, $file_data);
+}
