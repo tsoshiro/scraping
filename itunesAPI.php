@@ -38,7 +38,6 @@ foreach ($data['results'] as $row) {
 	$number++;
 }
 
-
 // 文字列をファイルに書き込み、CSVデータを作成する
 $file_name = "description_data.csv";
 
