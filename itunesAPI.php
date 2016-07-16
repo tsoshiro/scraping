@@ -39,11 +39,16 @@ foreach ($data['results'] as $row) {
 }
 
 // 文字列をファイルに書き込み、CSVデータを作成する
-$file_name = "description_data.csv";
 
-// ファイルを取得
-if (file_get_contents($file_name) != "") {
-	$file_data = file_get_contents($file_name).$file_data;
-	// 作成
+// 存在チェック
+$file_name = "description_data.csv";
+if (file_exists($file_name)) {
+	// ファイルを取得
+	if (file_get_contents($file_name) != "") {
+		$file_data = file_get_contents($file_name).$file_data;
+		// 作成
+		file_put_contents($file_name, $file_data);
+	}
+} else {
 	file_put_contents($file_name, $file_data);
 }
